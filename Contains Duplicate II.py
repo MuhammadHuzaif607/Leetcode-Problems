@@ -1,10 +1,20 @@
-nums = [1,0,1,1]
-k = 1
+nums = [1,2,3,1,2,3]
+k = 2
 dict1 = {}
-for el in range(len(nums)):
-    if nums[el] in dict1:
-        if (abs(dict1[nums[el]] -  el) <= k) and (nums[el] == nums[dict1[nums[el]]]):
+for index in range(len(nums)):
+    if nums[index] in dict1:
+        if abs(index - dict1[nums[index]]) <= k:
             print(True)
-        
+        else:
+            dict1[nums[index]] = index
+        print(dict1[nums[index]],index)
     else:
-        dict1[nums[el]] = el
+        dict1[nums[index]] = index
+        
+print(dict1)
+
+        
+
+        
+
+
