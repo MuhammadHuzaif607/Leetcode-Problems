@@ -13,8 +13,7 @@ def isAnagram(s, t):
             else:
                 return False
         except KeyError:
-            return False
-    print(char_count_dict)   
+            return False  
     return True
 
 print(isAnagram(s,t))
