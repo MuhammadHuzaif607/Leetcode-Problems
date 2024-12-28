@@ -77,7 +77,11 @@ class TreeNode:
 
         return root
            
+    def max_depth(self,node):
+        if not node:
+            return 0
         
+        return 1 + max(self.max_depth(node.right),self.max_depth(node.left))
     
 tree = TreeNode()
 q = [1,2,3]
