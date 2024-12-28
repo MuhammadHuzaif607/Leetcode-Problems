@@ -83,7 +83,20 @@ class TreeNode:
         
         return 1 + max(self.max_depth(node.right),self.max_depth(node.left))
     
+    
+    def isSame(self,p,q):
+        if p == None and q == None:
+            return True
+        
+        elif p == None or q == None:
+            return False
+        
+        return p.val == q.val and (self.isSame(p.left,q.left)) and (self.isSame(p.right,q.right))
 tree = TreeNode()
-q = [1,2,3]
-p = tree.array_to_btree(q)
-tree.bfs(p)
+q_arr = [1,2,3]
+q = tree.array_to_btree(q_arr)
+
+p_arr = [1,2,3]
+p = tree.array_to_btree(p_arr)
+
+print(tree.isSame(p,q))
