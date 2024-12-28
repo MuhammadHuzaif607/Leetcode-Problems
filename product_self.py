@@ -1,13 +1,32 @@
-nums = [1,2,3,4]
+nums = [-1,1,0,-3,3]
 prefix = []
-suffix = [0] * len(nums)
-prefix_num = 1
-suffix_num = 1
-
+suffix = []
+out = []
+pr = 1
+sr = 1
 for num in nums:
-    prefix_num *= num
-    prefix.append(prefix_num)
+    pr *= num
+    prefix.append(pr)
+    
+for num in nums[::-1]:
+    sr *= num
+    suffix.append(sr)
+    
+suffix.reverse()
 
-for index in reversed(range(len(nums))):
-    pass
+out.append(suffix[1])
+for i in range(1,len(nums) - 1):
+    pr = prefix[i - 1]
+    sr = suffix[i + 1]
+    out.append(pr*sr)
+    
+out.append(prefix[-2])
+print(out)
+    
+    
+    
+    
+
+    
+    
     
