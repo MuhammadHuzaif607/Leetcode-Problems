@@ -1,4 +1,4 @@
-nums = [-1,1,0,-3,3]
+nums =  [1,2,3,4]
 prefix = []
 suffix = []
 out = []
@@ -13,6 +13,7 @@ for num in nums[::-1]:
     suffix.append(sr)
     
 suffix.reverse()
+print(prefix,suffix)
 
 out.append(suffix[1])
 for i in range(1,len(nums) - 1):
