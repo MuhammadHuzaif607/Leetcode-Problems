@@ -11,4 +11,5 @@ def mergeIntervals(intervals):
     return mergedIntervals        
 
 intervals = [[1,4],[2,3]]
-print(mergeIntervals(intervals))
+if __name__ == "__main__":
+    print(mergeIntervals(intervals))
