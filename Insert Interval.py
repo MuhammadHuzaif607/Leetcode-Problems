@@ -6,7 +6,7 @@ def insertInterval(intervals,newInterval):
     
     start = newInterval[0]
     end = newInterval[-1]
-    merged = Falsegit add .
+    merged = False
     
     if start != end:
         for index in range(len(intervals)):
